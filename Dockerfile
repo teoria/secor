@@ -15,7 +15,7 @@ WORKDIR /opt/secor
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 # Compile secor
 RUN mvn install
-RUN mvn package -DskipTests -Pkafka-2.0.0
+RUN mvn package -DskipTests -Pkafka-2.2.0
 
 FROM openjdk:8-jre-alpine
 RUN rm /etc/ssl/certs/java/cacerts ; update-ca-certificates -f
